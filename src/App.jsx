@@ -7,9 +7,26 @@ function InputSection() {
   
 }
 
-function InformationForm() {
+function Editor() {
   return (
-    <div className='form'>
+    <div className='editor'>
+      <h1 className='title'>Editor</h1>
+    </div>
+  );
+}
+
+function Preview() {
+  return (
+    <div className='preview'>
+      <h1 className='title'>Preview</h1>
+      <PreviewPage />
+    </div>
+  );
+}
+
+function PreviewPage() {
+  return (
+    <div className='preview-page'>
       
     </div>
   );
@@ -29,9 +46,18 @@ function ExperienceInfo() {
 
 function Header () {
   return (
-    <div className='header'>
-      CV Generator
-    </div>
+    <header className='header'>
+      <h1>CV Generator</h1>
+    </header>
+  );
+}
+
+function Main () {
+  return (
+    <main className='main'>
+      <Editor />
+      <Preview />
+    </main>
   );
 }
 
@@ -40,7 +66,7 @@ function App() {
   return (
     <>
       <Header />
-      <InformationForm />
+      <Main />
     </>
   );
 }
